@@ -54,26 +54,32 @@ html {
   font-size: 10px;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
+  background-image: linear-gradient(rgb(255,255,255,.7), rgba(0,0,0,.5)), url("https://picsum.photos/id/321/1980/1200");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
 }
 
 body, html {
   height: 100%;
 }
-.hero-img {
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(rgb(255,255,255,.7), rgba(0,0,0,.5)), url("https://picsum.photos/id/321/1980/1200");
-  background-repeat: none;
-  background-size: cover;
-}
-.hero-inner {
-  height: 100vh;
+.content-section {
+  min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto 15% auto;
+  align-content: center;
 }
-h1 {
+#Contact {
+  margin-bottom: 0;
+  padding: 0;
+}
+h1, h2 {
   font-size: 8.4rem;
   font-family: 'Source Code Pro', monospace;
   letter-spacing: .5rem;
@@ -82,12 +88,20 @@ h1 {
   margin: 0 auto;
   color: transparent;
 }
+h2 {
+  font-size: 5rem;
+  color: black;
+}
+section.main-text {
+  background: rgba(255,255,255,.15);
+  width: 80%;
+  min-width: 30rem;
+  margin: 0 auto;
+}
 p {
   font-size: 2.5rem;
-  display: inline-block;
-  padding: 1%;
-  width: 50%;
-  min-width: 3rem;
+  width: 90%;
+  padding: 2%;
   margin: 0 auto;
 }
 nav {
@@ -107,58 +121,60 @@ nav a {
   color: white;
   padding: 1%;
   margin: .5%;
-  background: rgba(52, 163, 176, 0.4)
+  background: rgba(52, 163, 176, 0.3)
 }
 nav a span {
   color: transparent;
 }
 nav a:hover {
   color: black;
-  background: rgba(53, 164, 177, 0.7);
-  position: relative;
-  top: -.5rem;
+  background: rgba(53, 164, 177, 0.6);
 }
 nav a:hover span {
   color: white;
 }
 
-h1 span {
+h1 span, h2 span {
   border-right: 2px solid transparent;
 }
-h1 span:nth-child(1) {
+
+
+span.index:nth-child(1) {
   animation: appear .25s linear forwards 1;
 }
-
-h1 span:nth-child(2) {
+span.index:nth-child(2) {
   animation: appear .25s linear .25s forwards 1;
 }
-h1 span:nth-child(3) {
+span.index:nth-child(3) {
   animation: appear .25s linear .50s forwards 1;
 }
-h1 span:nth-child(4) {
+span.index:nth-child(4) {
   animation: appear .25s linear .75s forwards 1;
 }
-h1 span:nth-child(5) {
+span.index:nth-child(5) {
   animation: appear .25s linear 1s forwards 1;
 }
-h1 span:nth-child(6) {
+span.index:nth-child(6) {
   animation: appear .25s linear 1.25s forwards 1;
 }
-h1 span:nth-child(7) {
+span.index:nth-child(7) {
   animation: appear .25s linear 1.5s forwards 1;
 }
-h1 span:nth-child(8) {
+span.index:nth-child(8) {
   animation: appear .25s linear 1.75s forwards 1;
 }
-h1 span:nth-child(9) {
+span.index:nth-child(9) {
   animation: appear .25s linear 2s forwards 1;
 }
-h1 span:nth-child(10) {
+span.index:nth-child(10) {
   animation: appear .25s linear 2.25s forwards 1;
 }
-h1 span:nth-child(11) {
+span.index:nth-child(11) {
   animation: appear .25s linear 2.5s forwards 1;
   animation: blink-cursor .5s linear 2.75s infinite;
+}
+h2 span {
+  animation: blink-cursor .5s linear 0s infinite;
 }
 
 
@@ -196,4 +212,56 @@ h1 span:nth-child(11) {
 h1 span:hover {
   position: relative;
   top: -.5rem;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.portfolio-grid div {
+  width: 100px;
+  overflow: hidden;
+}
+.portfolio-grid div a{
+  min-width: 200px;
+  width: 40%;
+  max-width: 1vw;
+  opacity: .7;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.portfolio-grid div a:hover {
+  opacity: 1;
+}
+.project1 {
+  background: url('img src="https://picsum.photos/600/400');
+}
+.project2 {
+  background: url('img src="https://picsum.photos/600/400');
+}
+.project3 {
+  background: url('img src="https://picsum.photos/600/400');
+}
+.project4 {
+  background: url('img src="https://picsum.photos/600/400');
+}
+.contact-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.email-left {
+  width: 50%;
+  border-right: 2px dashed rgba(52, 163, 176, 1);
+  margin: 10% auto;
+}
+.socials-right {
+  width: 50%;
 }
